@@ -48,7 +48,7 @@ for pos, elem in enumerate(winning):
         for i in range(1, elem[0]+1):
             winning[i+pos][1]+=elem[1]
 print(total)
-print((time.time()-starttime)*1000)
+print((time.time()-starttime))
 
 
 
