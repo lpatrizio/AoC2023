@@ -13,9 +13,9 @@ while sample:
         saved = total
         for i in range(0, len(load)+1):   #rows check
             try:
-                if load[i]==load[i+1] and "#" in load[i]:  #this is our start point so we go from here
+                if load[i]==load[i+1] and "#" in load[i]:  
                     mirrored = True
-                    try:    #we'll eventually hit either the top or bottom limit and index error so we'll use that to our advantage
+                    try:    
                         for j in range(1, i+1):
                             if (load[i+1+j]==load[i-j]):
                                 mirrored=True
@@ -68,11 +68,11 @@ while sample:
         for i in range(0, len(load)+1):   #rows check
             try:
                 count = collections.Counter(numpy.array(load[i]) == numpy.array(load[i+1]))[False]
-                if count <= 1:  #this is our start point so we go from here
+                if count <= 1:  
                     if count==1: 
                         smudgerepair=True
                     mirrored = True
-                    try:    #we'll eventually hit either the top or bottom limit and index error so we'll use that to our advantage
+                    try:   
                         for j in range(1, i+1):
                             if (load[i+1+j]==load[i-j]):
                                 mirrored=True
